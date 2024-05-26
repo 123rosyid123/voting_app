@@ -6,8 +6,8 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="{{ asset('assets/img/apple-icon.png') }}">
-    <link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/logo2.png') }}">
+    <link rel="icon" href="{{ asset('images/logo2.png') }}">
     <title>
         Voting APP
     </title>
@@ -33,10 +33,10 @@
         Tip 2: you can also add an image using data-image tag
     -->
             <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+                <a href="#" class="simple-text logo-mini">
                     VA
                 </a>
-                <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+                <a href="#" class="simple-text logo-normal">
                     Voting App
                 </a>
             </div>
