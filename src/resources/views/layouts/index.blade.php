@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" href="../../assets/img/apple-icon.png">
     <link rel="icon" href="../../assets/img/favicon.png">
     <title>
-        Material Dashboard by Creative Tim
+        Voting APP
     </title>
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"

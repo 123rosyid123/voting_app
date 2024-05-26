@@ -42,7 +42,7 @@
                     <div class="card-body">
                         <h6 class="card-category">{{ $item['name'] }}</h6>
                         <div class="photo">
-                            <img src="{{ asset('assets/img/faces/avatar.jpg') }}" />
+                            <img src="{{ asset('images/logo2.png') }}" />
                         </div>
                         <form class="myForm" action="{{ route('voting.store') }}" method="POST">
                             @csrf
