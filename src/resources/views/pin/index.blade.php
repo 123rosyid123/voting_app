@@ -41,10 +41,10 @@
                                         </a>
                                         {{-- <button type="button" rel="tooltip" class="btn btn-success">
                                             <i class="material-icons">edit</i>
-                                        </button>
-                                        <button type="button" rel="tooltip" class="btn btn-danger">
-                                            <i class="material-icons">close</i>
                                         </button> --}}
+                                        <a href="{{route('pin.destroy', ['pin' => $item->id])}}" class="btn btn-danger deleteButton">
+                                            <i class="material-icons">close</i>
+                                        </a>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -55,4 +55,65 @@
             </div>
         </div>
     </div>
+@endsection
+@section('scripts')
+    <script>
+        $(document).ready(function() {
+            $('.deleteButton').click(function(event) {
+                event.preventDefault();
+
+                var url = $(this).attr('href');
+
+                swal({
+                    title: 'Are you sure?',
+                    text: 'Once deleted you will not be able to recover this PIN!',
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes, delete it!',
+                    cancelButtonText: 'No, keep it',
+                    confirmButtonClass: "btn btn-success",
+                    cancelButtonClass: "btn btn-danger",
+                    buttonsStyling: false
+                }).then(function() {
+                console.log(url);
+                    $.ajax({
+                            url: url,
+                            type: 'DELETE',
+                            data: {
+                                _token: "{{csrf_token()}}",
+                                _method: 'DELETE'
+                            },
+                            success: function(response) {
+                                console.log(response);
+                                swal({
+                                    title: 'Deleted!',
+                                    text: 'PIN has been deleted.',
+                                    type: 'success',
+                                    confirmButtonClass: "btn btn-success",
+                                    buttonsStyling: false
+                                })
+                                .then(
+                                    function() {
+                                        location.reload();
+                                    }
+                                ).catch(swal.noop)
+                            }
+                        });
+
+                }, function(dismiss) {
+                    // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
+                    if (dismiss === 'cancel') {
+                        swal({
+                            title: 'Cancelled',
+                            text: 'Your PIN is safe :)',
+                            type: 'error',
+                            confirmButtonClass: "btn btn-info",
+                            buttonsStyling: false
+                        }).catch(swal.noop)
+                    }
+                })
+
+            });
+        });
+    </script>
 @endsection

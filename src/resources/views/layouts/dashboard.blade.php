@@ -43,7 +43,7 @@
             <div class="sidebar-wrapper">
                 <div class="user">
                     <div class="photo">
-                        <img src="{{ asset('assets/img/faces/avatar.jpg') }}" />
+                        <img src="{{ asset('images/logo2.png') }}" />
                     </div>
                     <div class="user-info">
                         <a data-toggle="collapse" href="#collapseExample" class="username">

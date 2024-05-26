@@ -65,14 +65,19 @@
 
             // Buat key untuk penyimpanan di localStorage
             var storageKey = 'formSubmitted';
+            var storageKeyPIN = 'formSubmittedPIN';
+
+            // get pin value
+            var pin = $(this).find('input[name="pin"]').val();
 
             // Periksa apakah key sudah ada di localStorage
-            if (localStorage.getItem(storageKey)) {
+            if (localStorage.getItem(storageKey) && localStorage.getItem(storageKeyPIN) == pin){
                 // Jika key sudah ada, jangan lanjutkan pengiriman form
                 swal('Anda telah memilih !!!');
             } else {
                 // Simpan data ke localStorage dengan key tertentu
                 localStorage.setItem(storageKey, true);
+                localStorage.setItem(storageKeyPIN, pin);
 
                 // Lanjutkan pengiriman form
                 this.submit();

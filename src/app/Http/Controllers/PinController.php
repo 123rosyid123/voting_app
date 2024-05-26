@@ -69,7 +69,10 @@ class PinController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $pin = Pin::find($id);
+        $pin->delete();
+
+        return response()->json(['success' => 'Data deleted successfully']);
     }
 
     public function report(string $pin)
