@@ -5,7 +5,8 @@
             border-radius: 10%;
             border: solid red 4px;
             padding: 5px;
-            width: 100%;
+            max-width: 100%;
+            max-height: 175px;
         }
     </style>
 @endsection
@@ -37,7 +38,7 @@
             </div>
         </div>
         @foreach ($option as $key => $item)
-            <div class="col-md-4 cards">
+            <div class="col-md-4 cards d-flex">
                 <div class="card card-pricing card-raised">
                     <div class="card-body">
                         <h6 class="card-category">{{ $item['name'] }}</h6>
