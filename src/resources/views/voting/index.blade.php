@@ -2,10 +2,10 @@
 @section('styles')
     <style>
         img {
-            border-radius: 50%;
+            border-radius: 10%;
             border: solid red 4px;
             padding: 5px;
-            width: 200px
+            width: 100%;
         }
     </style>
 @endsection
@@ -42,7 +42,7 @@
                     <div class="card-body">
                         <h6 class="card-category">{{ $item['name'] }}</h6>
                         <div class="photo">
-                            <img src="{{ asset('images/logo2.png') }}" />
+                            <img src="{{ asset('images/'.$item['image']) }}" />
                         </div>
                         <form class="myForm" action="{{ route('voting.store') }}" method="POST">
                             @csrf

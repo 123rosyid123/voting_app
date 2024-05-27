@@ -26,23 +26,23 @@ class Voting extends Model
     public const CANDIDATE = [
         1 => [
             'name' => 'COOL B2B (GC : Lim Sui Djaja)',
-            'image' => 'cool-b2b.jpg',
+            'image' => 'COOL_B2B.jpeg',
         ],
         2 => [
             'name' => 'COOL Citra 2 (GC : Andre Tjahjanto)',
-            'image' => 'cool-citra-2.jpg',
+            'image' => 'COOL_Citra_2.jpeg',
         ],
         3 => [
             'name' => 'COOL Citra 5 (GC : Rahmat Bezaliel)',
-            'image' => 'cool-citra-5.jpg',
+            'image' => 'COOL_Citra_5.jpeg',
         ],
         4 => [
             'name' => 'COOL Efata (GC : Kencana Albert)',
-            'image' => 'cool-efata.jpg',
+            'image' => 'COOL_Efata.jpeg',
         ],
         5 => [
             'name' => 'COOL Sandi Cintia (GC : Sandi Cintia)',
-            'image' => 'cool-sandi-cintia.jpg',
+            'image' => 'COOL_Sandi_Cintia.jpeg',
         ]
     ];
 
