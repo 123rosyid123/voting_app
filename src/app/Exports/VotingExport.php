@@ -25,7 +25,7 @@ class VotingExport implements FromCollection, WithHeadings
         ->groupBy('option')->get();
 
         $voting->transform(function ($item) {
-            $item->option = Voting::CANDIDATE[$item->option]["name"];
+            $item->candidate = Voting::CANDIDATE[$item->candidate]["name"];
             return $item;
         });
 
