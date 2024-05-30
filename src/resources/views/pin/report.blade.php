@@ -17,6 +17,9 @@
                     <div class="stats">
                         total : {{$pin->voting()->count()}}
                     </div>
+                    <div>
+                        <a href="{{ route('pin.export', ['pin' => $pin->pin])}}" class="btn btn-primary">Download</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,8 +68,14 @@
                 options: {
                     scales: {
                         y: {
-                            beginAtZero: true
-                        }
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return Number.isInteger(value) ? value : null;
+                                }
+                            }
+
+                        },
                     },
                     maintainAspectRatio: false,
                 }

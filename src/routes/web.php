@@ -26,5 +26,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('pin', App\Http\Controllers\PinController::class);
     Route::get('/pin/{pin}/report', [App\Http\Controllers\PinController::class, 'report'])->name('pin.report');
+    Route::get('/pin/{pin}/report/export', [App\Http\Controllers\PinController::class, 'export'])->name('pin.export');
     Route::get('/vote/{pin}', [App\Http\Controllers\VotingController::class, 'index'])->name('vote');
 });

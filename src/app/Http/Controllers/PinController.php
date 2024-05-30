@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\VotingExport;
 use App\Models\Pin;
 use App\Models\Voting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
 
 class PinController extends Controller
 {
@@ -90,5 +93,10 @@ class PinController extends Controller
         $pin = Pin::where('pin', $pin)->first();
 
         return view('pin.report', compact('voting', 'result', 'pin'));
+    }
+
+    public function export($pin)
+    {
+        return Excel::download(new VotingExport($pin), 'VotingReport.xlsx');
     }
 }
