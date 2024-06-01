@@ -40,7 +40,7 @@
     <!-- End Navbar -->
     <div style="min-height: 100vh">
         <div class="page-header lock-page"
-            style="background-image: url('../../images/background.jpg'); background-size: contain; background-position: top center; min-height: 100vh">
+            style="background-image: url('../../images/background.webp'); background-size: contain; background-position: top center; min-height: 100vh">
             <!--   you can change the color of the filter page using: data-color="blue | green | orange | red | purple" -->
             <div class="container">
                 @yield('content')
@@ -57,7 +57,7 @@
 <!--  Google Maps Plugin  -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 <!--  Plugin for Date Time Picker and Full Calendar Plugin  -->
-<script src="../../assets/js/plugins/moment.min.js"></script>
+{{-- <script src="../../assets/js/plugins/moment.min.js"></script>
 <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
 <script src="../../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
 <!--	Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
@@ -67,7 +67,7 @@
 <!--	Plugin for Tags, full documentation here: http://xoxco.com/projects/code/tagsinput/  -->
 <script src="../../assets/js/plugins/bootstrap-tagsinput.js"></script>
 <!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
-<script src="../../assets/js/plugins/jasny-bootstrap.min.js"></script>
+<script src="../../assets/js/plugins/jasny-bootstrap.min.js"></script> --}}
 <!-- Plugins for presentation and navigation  -->
 <script src="../../assets/assets-for-demo/js/modernizr.js"></script>
 <script src="../../assets/assets-for-demo/js/vertical-nav.js"></script>
@@ -91,15 +91,15 @@
 <!-- Sliders Plugin, full documentation here: https://refreshless.com/nouislider/ -->
 <script src="../../assets/js/plugins/nouislider.min.js"></script>
 <!--  Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
-<script src="../../assets/js/plugins/jquery.select-bootstrap.js"></script>
+{{-- <script src="../../assets/js/plugins/jquery.select-bootstrap.js"></script>
 <!--  DataTables.net Plugin, full documentation here: https://datatables.net/    -->
 <script src="../../assets/js/plugins/jquery.datatables.js"></script>
-<!-- Sweet Alert 2 plugin, full documentation here: https://limonte.github.io/sweetalert2/ -->
+<!-- Sweet Alert 2 plugin, full documentation here: https://limonte.github.io/sweetalert2/ --> --}}
 <script src="../../assets/js/plugins/sweetalert2.js"></script>
 <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
 <script src="../../assets/js/plugins/jasny-bootstrap.min.js"></script>
-<!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
-<script src="../../assets/js/plugins/fullcalendar.min.js"></script>
+{{-- <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+<script src="../../assets/js/plugins/fullcalendar.min.js"></script> --}}
 <!-- demo init -->
 <script src="../../assets/js/plugins/demo.js"></script>
 <script type="text/javascript">
