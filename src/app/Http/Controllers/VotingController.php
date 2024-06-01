@@ -16,6 +16,7 @@ class VotingController extends Controller
     public function index(Request $request)
     {
         $input_pin = $request->pin;
+        return view('home')->with('warning', 'Voting has ended !');
         $pin = Pin::where('pin', $input_pin)->first();
         $option = Voting::CANDIDATE;
         if (!$pin) {
