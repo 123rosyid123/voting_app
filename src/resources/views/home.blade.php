@@ -28,14 +28,14 @@
                 </div>
             </div>
             <div class="card-body ">
-                <h4 class="card-title">Masukkan PIN</h4>
+                <h4 class="card-title text-bold"><strong>Masukkan PIN</strong></h4>
                 <div class="form-group">
-                    <label for="exampleInput1" class="bmd-label-floating">Enter PIN</label>
+                    <label for="exampleInput1" class="bmd-label-floating text-bold">Enter PIN</label>
                     <input type="text" class="form-control" id="pin" name="pin">
                 </div>
             </div>
             <div class="card-footer justify-content-center">
-                <button id="tombol-masuk" class="btn btn-rose btn-round">Masuk</button>
+                <button id="tombol-masuk" class="btn btn-rose btn-round text-bold">Masuk</button>
             </div>
         </div>
     </div>

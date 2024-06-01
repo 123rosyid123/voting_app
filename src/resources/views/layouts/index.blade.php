@@ -20,6 +20,14 @@
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../../assets/assets-for-demo/demo.css" rel="stylesheet" />
     <!-- iframe removal -->
+    <style>
+        .text-bold{
+            font-weight: bold;
+        }
+        .text-black{
+            color: black;
+        }
+    </style>
     @yield('styles')
 </head>
 
@@ -32,7 +40,7 @@
     <!-- End Navbar -->
     <div style="min-height: 100vh">
         <div class="page-header lock-page"
-            style="background-image: url('../../assets/img/lock.jpg'); background-size: cover; background-position: top center; min-height: 100vh">
+            style="background-image: url('../../images/background.jpg'); background-size: contain; background-position: top center; min-height: 100vh">
             <!--   you can change the color of the filter page using: data-color="blue | green | orange | red | purple" -->
             <div class="container">
                 @yield('content')
